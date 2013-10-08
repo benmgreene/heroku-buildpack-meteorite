@@ -193,13 +193,7 @@ rm "$CACHE_DIR"/bundle.tar.gz
 ############################################
 # Prepare ENV vars
 ############################################
-echo "Setting up MONGO_URL in .profile.d"
-mkdir -p "$BUILD_DIR"/.profile.d
-cat > "$BUILD_DIR"/.profile.d/mongo.sh <<EOF
-  #!/bin/sh
 
-  export MONGO_URL=\${MONGO_URL:-\$MONGOHQ_URL};
-EOF
 
 # vendor node into the slug
 PATH="$METEOR_BUILD_DIR/bin:$PATH"
