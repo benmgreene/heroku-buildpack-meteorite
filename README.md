@@ -24,5 +24,4 @@ You can specify meteor settings by setting the `METEOR_SETTINGS` environment var
 heroku config:add METEOR_SETTINGS='{"herp":"derp"}'
 ```
 
-
-You need to have a verified account so the buildpack can add a `mongohq:sandbox` addon.
+This buildpack is DB agnostic so you need to specify a DB connection in `heroku config`
