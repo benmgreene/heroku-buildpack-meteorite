@@ -235,16 +235,17 @@ echo "-----> PhantomJS installed!"
 
 
 # install sass
-status "Installing Sass"
+echo "-----> Installing Sass..."
 export GEM_HOME=$BUILD_DIR/.gem/ruby/1.9.1
 PATH="$GEM_HOME/bin:$PATH"
 if test -d $CACHE_DIR/ruby/.gem; then
-  status "Restoring ruby gems directory from cache"
+  echo "-----> Restoring ruby gems directory from cache..."
   cp -r $CACHE_DIR/ruby/.gem $BUILD_DIR
   HOME=$BUILD_DIR gem update sass --user-install --no-rdoc --no-ri
 else
   HOME=$BUILD_DIR gem install sass --user-install --no-rdoc --no-ri
 fi
+echo "-----> Sass installed!"
 
 ############################################
 # Prepare ENV vars
